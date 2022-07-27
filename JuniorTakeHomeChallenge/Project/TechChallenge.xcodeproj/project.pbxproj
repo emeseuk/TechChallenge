@@ -28,6 +28,7 @@
 		E65B0AF9289149D1000154C5 /* FilteringButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B0AF8289149D1000154C5 /* FilteringButtonView.swift */; };
 		E65B0AFB28914A0F000154C5 /* FilteringListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B0AFA28914A0F000154C5 /* FilteringListView.swift */; };
 		E65B0AFE28914A43000154C5 /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B0AFD28914A43000154C5 /* TransactionListViewModel.swift */; };
+		E65B0B0028914B94000154C5 /* FloatingSumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B0AFF28914B94000154C5 /* FloatingSumView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		E65B0AF8289149D1000154C5 /* FilteringButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringButtonView.swift; sourceTree = "<group>"; };
 		E65B0AFA28914A0F000154C5 /* FilteringListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringListView.swift; sourceTree = "<group>"; };
 		E65B0AFD28914A43000154C5 /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
+		E65B0AFF28914B94000154C5 /* FloatingSumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingSumView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 			children = (
 				E65B0AF8289149D1000154C5 /* FilteringButtonView.swift */,
 				E65B0AFA28914A0F000154C5 /* FilteringListView.swift */,
+				E65B0AFF28914B94000154C5 /* FloatingSumView.swift */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				3CE226BF26B05EB100B3D085 /* ViewModifiers.swift in Sources */,
 				3C296ECF26B31193006DF667 /* Angle.swift in Sources */,
 				3C3FCAAD26C57A7D0092AB11 /* TransactionModel+UI.swift in Sources */,
+				E65B0B0028914B94000154C5 /* FloatingSumView.swift in Sources */,
 				E65B0AF9289149D1000154C5 /* FilteringButtonView.swift in Sources */,
 				3CE226B526B0523C00B3D085 /* TransactionListView.swift in Sources */,
 				E65B0AFE28914A43000154C5 /* TransactionListViewModel.swift in Sources */,

@@ -22,6 +22,7 @@ struct TransactionListView: View {
             .animation(.easeIn)
             .listStyle(PlainListStyle())
             .navigationBarTitleDisplayMode(.inline)
+            FloatingSumView(category: vm.myCategory, total: totalCount)
         .navigationTitle("Transactions")
         }
     }
@@ -42,12 +43,18 @@ struct TransactionListView: View {
             return transactions.filter{ $0.category.rawValue == vm.myCategory.name.rawValue }
         }
     }
+    
+    var totalCount: Double {
+        let total = filteredTransactions.compactMap{ $0.amount }.reduce(0, +)
+        return total
+    }
 }
 
 #if DEBUG
 struct TransactionListView_Previews: PreviewProvider {
     static var previews: some View {
         TransactionListView()
+            .environmentObject(TransactionListViewModel())
     }
 }
 #endif

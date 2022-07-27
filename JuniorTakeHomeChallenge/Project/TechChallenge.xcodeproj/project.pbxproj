@@ -24,6 +24,10 @@
 		3CE226BF26B05EB100B3D085 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE226BE26B05EB100B3D085 /* ViewModifiers.swift */; };
 		3CE226C126B062BA00B3D085 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE226C026B062BA00B3D085 /* Double.swift */; };
 		3CE226C726B2E41E00B3D085 /* InsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE226C626B2E41E00B3D085 /* InsightsView.swift */; };
+		E65B0AF628914995000154C5 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B0AF528914995000154C5 /* Category.swift */; };
+		E65B0AF9289149D1000154C5 /* FilteringButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B0AF8289149D1000154C5 /* FilteringButtonView.swift */; };
+		E65B0AFB28914A0F000154C5 /* FilteringListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B0AFA28914A0F000154C5 /* FilteringListView.swift */; };
+		E65B0AFE28914A43000154C5 /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B0AFD28914A43000154C5 /* TransactionListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,10 @@
 		3CE226BE26B05EB100B3D085 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		3CE226C026B062BA00B3D085 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		3CE226C626B2E41E00B3D085 /* InsightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsView.swift; sourceTree = "<group>"; };
+		E65B0AF528914995000154C5 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		E65B0AF8289149D1000154C5 /* FilteringButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringButtonView.swift; sourceTree = "<group>"; };
+		E65B0AFA28914A0F000154C5 /* FilteringListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringListView.swift; sourceTree = "<group>"; };
+		E65B0AFD28914A43000154C5 /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,7 @@
 		3CE2268226B007D200B3D085 /* TechChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				E65B0AFC28914A2B000154C5 /* ViewModels */,
 				3C3FCAAE26C57C650092AB11 /* README.md */,
 				3CE226C926B2E43000B3D085 /* View */,
 				3CE226CA26B2E43B00B3D085 /* Model */,
@@ -139,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				3CE2268326B007D200B3D085 /* TechChallengeApp.swift */,
+				E65B0AF7289149B2000154C5 /* Filters */,
 				3CE226CB26B2E44E00B3D085 /* Insights */,
 				3CE226C826B2E42800B3D085 /* TransactionList */,
 				3CE226CC26B2E47300B3D085 /* Shared */,
@@ -153,6 +163,7 @@
 				3CE226B026B03DC600B3D085 /* ModelData.swift */,
 				3CE226AE26B03CBA00B3D085 /* TransactionModel.swift */,
 				3C3FCAAC26C57A7D0092AB11 /* TransactionModel+UI.swift */,
+				E65B0AF528914995000154C5 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,6 +194,23 @@
 				3C296ED026B404A5006DF667 /* Path.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E65B0AF7289149B2000154C5 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				E65B0AF8289149D1000154C5 /* FilteringButtonView.swift */,
+				E65B0AFA28914A0F000154C5 /* FilteringListView.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		E65B0AFC28914A2B000154C5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E65B0AFD28914A43000154C5 /* TransactionListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,11 +329,15 @@
 				3CE226BF26B05EB100B3D085 /* ViewModifiers.swift in Sources */,
 				3C296ECF26B31193006DF667 /* Angle.swift in Sources */,
 				3C3FCAAD26C57A7D0092AB11 /* TransactionModel+UI.swift in Sources */,
+				E65B0AF9289149D1000154C5 /* FilteringButtonView.swift in Sources */,
 				3CE226B526B0523C00B3D085 /* TransactionListView.swift in Sources */,
+				E65B0AFE28914A43000154C5 /* TransactionListViewModel.swift in Sources */,
 				3CE226B126B03DC600B3D085 /* ModelData.swift in Sources */,
 				3CE2268426B007D200B3D085 /* TechChallengeApp.swift in Sources */,
 				3C296ED126B404A5006DF667 /* Path.swift in Sources */,
+				E65B0AFB28914A0F000154C5 /* FilteringListView.swift in Sources */,
 				3CE226B926B0548C00B3D085 /* TransactionView.swift in Sources */,
+				E65B0AF628914995000154C5 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

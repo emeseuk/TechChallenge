@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct TechChallengeApp: App {
+    @StateObject var vm = TransactionListViewModel()
 
     var body: some Scene {
         WindowGroup {
@@ -16,6 +17,7 @@ struct TechChallengeApp: App {
                 NavigationView {
                     TransactionListView()
                 }
+                .environmentObject(vm)
                 .tabItem {
                     Label("Transactions", systemImage: "list.bullet")
                 }

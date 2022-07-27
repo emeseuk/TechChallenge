@@ -25,6 +25,7 @@ struct TechChallengeApp: App {
                 NavigationView {
                     InsightsView()
                 }
+                .environmentObject(vm)
                 .tabItem {
                     Label("Insights", systemImage: "chart.pie.fill")
                 }

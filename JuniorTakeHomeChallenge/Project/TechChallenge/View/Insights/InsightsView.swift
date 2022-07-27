@@ -9,6 +9,7 @@ import SwiftUI
 
 struct InsightsView: View {
     let transactions: [TransactionModel] = ModelData.sampleTransactions
+    @EnvironmentObject var vm: TransactionListViewModel
     
     var body: some View {
         List {
@@ -19,11 +20,14 @@ struct InsightsView: View {
                         .foregroundColor(category.color)
                     Spacer()
                     // TODO: calculate cummulative expense for each category
-                    Text("$0.0")
+                    Text("$\(vm.insightsDictionary[category.rawValue] ?? 0, specifier: "%.2f")")
                         .bold()
                         .secondary()
                 }
             }
+        }
+        .onAppear {
+            vm.createInsights(for: vm.pinnedTransactions)
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("Insights")
@@ -35,6 +39,7 @@ struct InsightsView_Previews: PreviewProvider {
     static var previews: some View {
         InsightsView()
             .previewLayout(.sizeThatFits)
+            .environmentObject(TransactionListViewModel())
     }
 }
 #endif

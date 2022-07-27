@@ -45,7 +45,7 @@ struct TransactionListView: View {
     }
     
     var totalCount: Double {
-        let total = filteredTransactions.compactMap{ $0.amount }.reduce(0, +)
+        let total = vm.calculateTotal(for: vm.pinnedTransactions, by: vm.myCategory.name)
         return total
     }
 }

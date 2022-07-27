@@ -53,4 +53,21 @@ class TransactionListViewModel: ObservableObject {
             insightsDictionary[category.rawValue] = total
         }
     }
+    
+    func filterTransactions(by category: Category) -> [TransactionModel] {
+        switch category.name {
+        case .all:
+            return transactions
+        case .food:
+            return transactions.filter{ $0.category.rawValue == category.name.rawValue }
+        case .health:
+            return transactions.filter{ $0.category.rawValue == category.name.rawValue }
+        case .entertainment:
+            return transactions.filter{ $0.category.rawValue == category.name.rawValue }
+        case .shopping:
+            return transactions.filter{ $0.category.rawValue == category.name.rawValue }
+        case .travel:
+            return transactions.filter{ $0.category.rawValue == category.name.rawValue }
+        }
+    }
 }

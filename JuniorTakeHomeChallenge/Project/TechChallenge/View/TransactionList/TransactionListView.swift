@@ -28,20 +28,7 @@ struct TransactionListView: View {
     }
     
     var filteredTransactions: [TransactionModel] {
-        switch vm.myCategory.name {
-        case .all:
-            return transactions
-        case .food:
-            return transactions.filter{ $0.category.rawValue == vm.myCategory.name.rawValue }
-        case .health:
-            return transactions.filter{ $0.category.rawValue == vm.myCategory.name.rawValue }
-        case .entertainment:
-            return transactions.filter{ $0.category.rawValue == vm.myCategory.name.rawValue }
-        case .shopping:
-            return transactions.filter{ $0.category.rawValue == vm.myCategory.name.rawValue }
-        case .travel:
-            return transactions.filter{ $0.category.rawValue == vm.myCategory.name.rawValue }
-        }
+        vm.filterTransactions(by: vm.myCategory)
     }
     
     var totalCount: Double {

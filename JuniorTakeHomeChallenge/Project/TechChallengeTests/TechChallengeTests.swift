@@ -6,27 +6,35 @@
 //
 
 import XCTest
+@testable import TechChallenge
 
 class TechChallengeTests: XCTestCase {
+    private let transaction = TransactionModel(
+        id: 1,
+        name: "Movie Night",
+        category: .entertainment,
+        amount: 82.99,
+        date: Date(string: "2021-03-05")!,
+        accountName: "Credit Card",
+        provider: .timeWarner
+    )
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    //Note: I don't know how to test randomAccountName
+//    func testFilteringOfTransactions() throws {
+//        let vm = TransactionListViewModel()
+//        let mockCategory = Category(name: .entertainment, color: .orange)
+//        XCTAssertEqual(vm.filterTransactions(by: mockCategory), [transaction])
+//    }
+
+    func testSumOfTransactionForCategory_Unpinned () throws {
+        let mockPinnedTransaction = [PinnedTransaction(transaction: transaction, pinned: false)]
+        let vm = TransactionListViewModel()
+        XCTAssertEqual(vm.calculateTotal(for: mockPinnedTransaction, by: .entertainment), 82.99)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testSumOfTransactionForCategory_Pinned () throws {
+        let mockPinnedTransaction = [PinnedTransaction(transaction: transaction, pinned: true)]
+        let vm = TransactionListViewModel()
+        XCTAssertEqual(vm.calculateTotal(for: mockPinnedTransaction, by: .entertainment), 0.0)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
